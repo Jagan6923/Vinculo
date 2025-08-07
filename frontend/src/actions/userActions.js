@@ -177,7 +177,7 @@ export const resetPassword = (formData, token) => async (dispatch) => {
 
 }
 
-export const getUsers = async (dispatch) => {
+export const getUsers = () => async (dispatch) => {
 
     try {
         dispatch(usersRequest())

@@ -21,7 +21,7 @@ export const createOrder = (order) => async (dispatch) => {
             }
         }
 
-        const { data } = await axios.post('/api/v1/order/new', order, config);
+        const { data } = await axios.post('/api/v1/orders/order/new', order, config);
 
         dispatch({
             type: 'CREATE_ORDER_SUCCESS',
@@ -42,7 +42,7 @@ export const createOrder = (order) => async (dispatch) => {
 export const userOrders = async (dispatch) => {
     try {
         dispatch(userOrdersRequest())
-        const { data } = await axios.get(`/api/v1/myorders`)
+        const { data } = await axios.get(`/api/v1/orders/myorders`)
         dispatch(userOrdersSuccess(data))
     } catch (error) {
         const errorMessage = error.response?.data?.message || error.message || 'Failed to fetch user orders';
@@ -52,7 +52,7 @@ export const userOrders = async (dispatch) => {
 export const orderDetail = id => async (dispatch) => {
     try {
         dispatch(orderDetailRequest())
-        const { data } = await axios.get(`/api/v1/order/${id}`)
+        const { data } = await axios.get(`/api/v1/orders/order/${id}`)
         dispatch(orderDetailSuccess(data))
     } catch (error) {
         const errorMessage = error.response?.data?.message || error.message || 'Failed to fetch order details';
@@ -60,7 +60,7 @@ export const orderDetail = id => async (dispatch) => {
     }
 }
 
-export const adminOrders = async (dispatch) => {
+export const adminOrders = () => async (dispatch) => {
     try {
         dispatch(adminOrdersRequest())
         const { data } = await axios.get(`/api/v1/orders/admin/orders`)

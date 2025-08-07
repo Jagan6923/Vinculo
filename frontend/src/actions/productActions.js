@@ -70,7 +70,7 @@ export const createReview = reviewData => async (dispatch) => {
 
 }
 
-export const getAdminProducts = async (dispatch) => {
+export const getAdminProducts = () => async (dispatch) => {
 
     try {
         dispatch(adminProductsRequest())
