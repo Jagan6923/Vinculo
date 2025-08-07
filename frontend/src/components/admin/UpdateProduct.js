@@ -34,6 +34,20 @@ export default function UpdateProduct() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
+    // Helper function to get the correct image URL
+    const getImageUrl = (imageUrl) => {
+        if (!imageUrl) return '/images/default-product.png';
+
+        // If the image URL is already absolute (starts with http/https), use it as is
+        if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
+            return imageUrl;
+        }
+
+        // If it's a relative path, prepend the API URL
+        const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+        return `${baseUrl}${imageUrl}`;
+    };
+
     const onImagesChange = (e) => {
         const files = Array.from(e.target.files);
         setImagesPreview([]);
@@ -260,11 +274,15 @@ export default function UpdateProduct() {
                                 {oldImages && oldImages.map(img => (
                                     <img
                                         key={img}
-                                        src={img.url}
+                                        src={getImageUrl(img.url)}
                                         alt={img.url}
                                         className="mt-3 mr-2"
                                         width="55"
                                         height="52"
+                                        onError={(e) => {
+                                            console.log('Admin image failed to load:', e.target.src);
+                                            e.target.src = '/images/default-product.png'; // fallback image
+                                        }}
                                     />
                                 ))}
                                 {imagesPreview.map(image => (

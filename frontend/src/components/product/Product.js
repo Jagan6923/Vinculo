@@ -10,6 +10,20 @@ export default function Product({ product }) {
         return (ratings / 5) * 100;
     };
 
+    // Helper function to get the correct image URL
+    const getImageUrl = (imageUrl) => {
+        if (!imageUrl) return '/images/default-product.png';
+
+        // If the image URL is already absolute (starts with http/https), use it as is
+        if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
+            return imageUrl;
+        }
+
+        // If it's a relative path, prepend the API URL
+        const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+        return `${baseUrl}${imageUrl}`;
+    };
+
     return (
         <div className="col-6 col-md-4 col-lg-3 my-3"> {/* Adjusted Bootstrap classes */}
             <div className="card p-3 rounded product">
@@ -17,13 +31,17 @@ export default function Product({ product }) {
                     {product.images.length > 0 ? (
                         <img
                             className="card-img-top mx-auto"
-                            src={product.images[0].image}
+                            src={getImageUrl(product.images[0].image)}
                             alt={firstName} // Use firstName for better accessibility
+                            onError={(e) => {
+                                console.log('Image failed to load:', e.target.src);
+                                e.target.src = '/images/default-product.png'; // fallback image
+                            }}
                         />
                     ) : (
                         <img
                             className="card-img-top mx-auto"
-                            src="default-image-path.jpg"  // Add a default image path
+                            src="/images/default-product.png"  // Add a default image path
                             alt="Default Product"
                         />
                     )}

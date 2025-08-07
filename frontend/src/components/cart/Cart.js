@@ -1,7 +1,7 @@
 import { Fragment, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
-import { decreaseCartItemQty, increaseCartItemQty, removeItemFromCart, getCart , deleteCartItem } from '../../slices/cartSlice';
+import { decreaseCartItemQty, increaseCartItemQty, removeItemFromCart, getCart, deleteCartItem } from '../../slices/cartSlice';
 
 
 export default function Cart() {
@@ -11,7 +11,7 @@ export default function Cart() {
 
   useEffect(() => {
     dispatch(getCart());
-     // Load cart with populated product data
+    // Load cart with populated product data
   }, [dispatch]);
 
   if (loading) {
@@ -27,7 +27,7 @@ export default function Cart() {
     return (
       <div className="text-center mt-5">
         <img src="/images/empty-cart.png" alt="Empty Cart" style={{ width: '300px', height: 'auto' }} />
-        <h2 style={{fontSize:'2em'}}>Your Cart is Empty</h2>
+        <h2 style={{ fontSize: '2em' }}>Your Cart is Empty</h2>
       </div>
     );
   }
@@ -45,7 +45,21 @@ export default function Cart() {
 
   const getFirstName = (name) => {
     return name ? name.split(',')[0] : 'Unknown Product'; // Use product name instead of item name
-};
+  };
+
+  // Helper function to get the correct image URL
+  const getImageUrl = (imageUrl) => {
+    if (!imageUrl) return '/images/default-product.png';
+
+    // If the image URL is already absolute (starts with http/https), use it as is
+    if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
+      return imageUrl;
+    }
+
+    // If it's a relative path, prepend the API URL
+    const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+    return `${baseUrl}${imageUrl}`;
+  };
 
   const removeItemHandler = (itemId) => {
     dispatch(deleteCartItem({ itemId }));
@@ -75,7 +89,7 @@ export default function Cart() {
     borderColor: '#102C57',
   };
 
-  const emptyCartImage = '/images/empty-cart.png'; 
+  const emptyCartImage = '/images/empty-cart.png';
 
   return (
     <Fragment>
@@ -88,10 +102,14 @@ export default function Cart() {
                 <div style={cartItemStyle}>
                   <div className="row align-items-center">
                     <div className="col-4 col-lg-3">
-                      <img 
-                        src={item.image ?? '/images/default-product.png'} 
-                        alt={item.product?.name ?? 'Product'} 
-                        className="img-fluid" 
+                      <img
+                        src={getImageUrl(item.image)}
+                        alt={item.product?.name ?? 'Product'}
+                        className="img-fluid"
+                        onError={(e) => {
+                          console.log('Cart image failed to load:', e.target.src);
+                          e.target.src = '/images/default-product.png'; // fallback image
+                        }}
                       />
                     </div>
 

@@ -124,6 +124,20 @@ export default function ProductDetail() {
     console.log('Product ID:', id);
     console.log('Loading state:', loading);
 
+    // Helper function to get the correct image URL
+    const getImageUrl = (imageUrl) => {
+        if (!imageUrl) return '/images/default-product.png';
+
+        // If the image URL is already absolute (starts with http/https), use it as is
+        if (imageUrl.startsWith('http://') || imageUrl.startsWith('https://')) {
+            return imageUrl;
+        }
+
+        // If it's a relative path, prepend the API URL
+        const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+        return `${baseUrl}${imageUrl}`;
+    };
+
     return (
         <Fragment>
             {loading ? <Loader /> : (
@@ -143,7 +157,7 @@ export default function ProductDetail() {
                                             <Carousel.Item key={image._id || index}>
                                                 <img
                                                     className="d-block w-100"
-                                                    src={`${process.env.REACT_APP_API_URL || 'http://localhost:8000'}${image.image}`}
+                                                    src={getImageUrl(image.image)}
                                                     alt={firstName}
                                                     onError={(e) => {
                                                         console.log('Image failed to load:', e.target.src);
