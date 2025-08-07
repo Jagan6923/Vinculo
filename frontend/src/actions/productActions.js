@@ -74,7 +74,7 @@ export const getAdminProducts = async (dispatch) => {
 
     try {
         dispatch(adminProductsRequest())
-        const { data } = await axios.get(`/api/v1/admin/products`);
+        const { data } = await axios.get(`/api/v1/products/admin/products`);
         dispatch(adminProductsSuccess(data))
     } catch (error) {
         //handle error
@@ -88,7 +88,7 @@ export const createNewProduct = productData => async (dispatch) => {
 
     try {
         dispatch(newProductRequest())
-        const { data } = await axios.post(`/api/v1/admin/product/new`, productData);
+        const { data } = await axios.post(`/api/v1/products/admin/product/new`, productData);
         dispatch(newProductSuccess(data))
     } catch (error) {
         //handle error
@@ -102,7 +102,7 @@ export const deleteProduct = id => async (dispatch) => {
 
     try {
         dispatch(deleteProductRequest())
-        await axios.delete(`/api/v1/admin/product/${id}`);
+        await axios.delete(`/api/v1/products/admin/product/${id}`);
         dispatch(deleteProductSuccess())
     } catch (error) {
         //handle error
@@ -116,7 +116,7 @@ export const updateProduct = (id, productData) => async (dispatch) => {
 
     try {
         dispatch(updateProductRequest())
-        const { data } = await axios.put(`/api/v1/admin/product/${id}`, productData);
+        const { data } = await axios.put(`/api/v1/products/admin/product/${id}`, productData);
         dispatch(updateProductSuccess(data))
     } catch (error) {
         //handle error
@@ -131,7 +131,7 @@ export const getReviews = id => async (dispatch) => {
 
     try {
         dispatch(reviewsRequest())
-        const { data } = await axios.get(`/api/v1/admin/reviews`, { params: { id } });
+        const { data } = await axios.get(`/api/v1/products/admin/reviews`, { params: { id } });
         dispatch(reviewsSuccess(data))
     } catch (error) {
         //handle error
@@ -145,7 +145,7 @@ export const deleteReview = (productId, id) => async (dispatch) => {
 
     try {
         dispatch(deleteReviewRequest())
-        await axios.delete(`/api/v1/admin/review`, { params: { productId, id } });
+        await axios.delete(`/api/v1/products/admin/review`, { params: { productId, id } });
         dispatch(deleteReviewSuccess())
     } catch (error) {
         //handle error

@@ -20,6 +20,8 @@ import {BsThreeDots} from 'react-icons/bs'
 
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="footer">
       <div className="desktop-footer">
@@ -112,7 +114,7 @@ const Footer = () => {
         </div>
 
         <div className="copyright">
-          <p>&copy; 2024 SRI SHANMUGAVEL MILLS PRIVATE LIMITED. All rights reserved.</p>
+          <p>&copy; {currentYear} SRI SHANMUGAVEL MILLS PRIVATE LIMITED. All rights reserved.</p>
         </div>
       </div>
 
