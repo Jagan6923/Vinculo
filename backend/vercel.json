@@ -1,6 +1,7 @@
 {
   "version": 2,
   "installCommand": "npm install --legacy-peer-deps",
+  "buildCommand": "echo 'No build command needed'",
   "rewrites": [
     {
       "source": "/(.*)",

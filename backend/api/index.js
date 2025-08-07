@@ -7,13 +7,13 @@ const mongoose = require('mongoose');
 process.env.NODE_ENV = 'production';
 
 // Load production environment variables
-dotenv.config({ path: path.join(__dirname, 'config/config.prod.env') });
+dotenv.config({ path: path.join(__dirname, '../config/config.prod.env') });
 
 // Import the app
-const app = require('./app');
+const app = require('../app');
 
 // Connect to database only if not already connected
-const connectDatabase = require('./config/database');
+const connectDatabase = require('../config/database');
 
 let isConnected = false;
 
