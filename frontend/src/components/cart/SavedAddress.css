@@ -1,0 +1,104 @@
+.saved-address {
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #f8f9fa;
+    overflow-wrap: break-word; /* Break long words and wrap text within the container */
+    word-wrap: break-word; /* Older browser support for text wrapping */
+}
+
+.saved-address p {
+    overflow-wrap: break-word; /* Ensure text inside paragraphs also wraps */
+    word-wrap: break-word; /* Older browser support for text wrapping */
+}
+
+/* Button container adjustments */
+.btn-container {
+    display: flex;
+    justify-content: flex-start; /* Align buttons in a row */
+    margin-bottom: 10px;
+}
+
+.btn-container .btn {
+    width: auto; /* Auto width for buttons */
+    margin-right: 10px; /* Spacing between buttons */
+    padding: 10px 20px; /* Consistent padding for buttons */
+    font-size: 14px; /* Consistent font size */
+}
+
+.btn-container .btn:last-child {
+    margin-right: 0; /* Remove margin from the last button */
+}
+
+.edit-remove-container {
+    display: flex;
+    justify-content: flex-start; /* Align edit and remove buttons in a single row */
+    gap: 20px; /* Spacing between edit and remove buttons */
+    margin-bottom: 10px; /* Margin below the buttons */
+}
+
+.continue-container {
+    display: flex;
+    justify-content: flex-end; /* Align the continue button to the right side */
+}
+
+.continue-button {
+    padding: 10px 20px; /* Consistent padding for continue button */
+    font-size: 14px; /* Consistent font size */
+}
+
+/* Mobile view adjustments */
+@media (max-width: 767px) {
+    .btn-container {
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .btn-container .btn {
+        width: auto; /* Ensures proper width */
+        margin-right: 10px;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .edit-remove-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 20px; /* Adjusted for better spacing */
+        margin-bottom: 10px;
+    }
+
+    .remove-button {
+        padding: 4px 20px;
+        font-size: 14px;
+        text-align: center;
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    .continue-button {
+        padding: 4px 20px;
+        font-size: 13px;
+        margin-top: -12px; /* Move the button up */
+        width: 8px;
+    }
+
+    .continue-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: auto;
+        margin-top: 12px;
+    }
+
+    .continue-container .continue-button {
+        margin-left: 9px; /* Adjust the space between remove and continue buttons */
+        height: 29px;
+
+    }
+
+    #wrapper {
+        padding-bottom: 100px;
+    }
+}

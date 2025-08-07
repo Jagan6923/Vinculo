@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px; /* Adjust based on your header's height */
+  z-index: 1000;
+  background-color: #fff; /* Ensure header background covers content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #ddd; /* Optional: adds a bottom border for distinction */
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.5rem; /* Adjust based on your design */
+  color: #333;
+}
+
+/* Privacy Policy Container Styling */
+.privacy-policy {
+  padding: 40px 20px; /* Increased top and bottom padding */
+  max-width: 900px;
+  margin: 80px auto; /* Ensure spacing around the container, increased top margin to account for header */
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: justify; /* Professional text alignment */
+  position: relative;
+  min-height: calc(100vh - 60px); /* Ensure container height covers viewport height minus header height */
+  overflow: auto; /* Allow content to scroll if it overflows */
+}
+
+/* Heading Styles */
+.privacy-policy h1 {
+  font-size: 2rem; /* Responsive font size */
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px; /* Increased bottom margin for more space */
+  text-align: center; /* Center align the main heading */
+}
+
+.privacy-policy h2 {
+  font-size: 1.5rem; /* Responsive font size */
+  font-weight: 500;
+  color: #555;
+  margin-top: 30px; /* Increased top margin for more space */
+  margin-bottom: 15px; /* Increased bottom margin to ensure spacing from following content */
+}
+
+/* Paragraph Styles */
+.privacy-policy p {
+  font-size: 1rem; /* Responsive font size */
+  color: #666;
+  line-height: 1.8; /* Improved readability */
+  margin-bottom: 20px; /* Increased margin-bottom for spacing between paragraphs */
+}
+
+/* List Styles */
+.privacy-policy ul {
+  margin-left: 20px; /* Indentation for better list appearance */
+  padding-left: 10px;
+  list-style-type: disc;
+}
+
+.privacy-policy li {
+  margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .privacy-policy {
+      padding: 30px 15px; /* Adjusted padding for medium screens */
+      margin: 60px auto; /* Adjust margin for smaller screens */
+      min-height: calc(100vh - 50px); /* Adjust min-height for medium screens */
+  }
+
+  .privacy-policy h1 {
+      font-size: 1.75rem; /* Adjust font size for medium screens */
+      margin-bottom: 25px; /* Adjusted bottom margin for medium screens */
+  }
+
+  .privacy-policy h2 {
+      font-size: 1.375rem; /* Adjust font size for medium screens */
+      margin-top: 25px; /* Adjusted top margin for medium screens */
+      margin-bottom: 15px; /* Adjusted bottom margin for medium screens */
+  }
+
+  .privacy-policy p {
+      font-size: 0.9375rem; /* Adjust font size for medium screens */
+      line-height: 1.6; /* Adjust line height for readability */
+      margin-bottom: 20px; /* Adjusted margin-bottom for medium screens */
+  }
+
+  .privacy-policy ul {
+      margin-left: 15px; /* Adjust margin for better fit */
+  }
+}
+
+@media (max-width: 480px) {
+  .privacy-policy {
+      padding: 20px 10px; /* Adjusted padding for small screens */
+      margin: 50px auto; /* Adjust margin for small screens */
+      min-height: calc(100vh - 40px); /* Adjust min-height for small screens */
+  }
+
+  .privacy-policy h1 {
+      font-size: 1.5rem; /* Adjust font size for small screens */
+      margin-bottom: 20px; /* Adjusted bottom margin for small screens */
+  }
+
+  .privacy-policy h2 {
+      font-size: 1.25rem; /* Adjust font size for small screens */
+      margin-top: 20px; /* Adjusted top margin for small screens */
+      margin-bottom: 15px; /* Adjusted bottom margin for small screens */
+  }
+
+  .privacy-policy p {
+      font-size: 0.875rem; /* Adjust font size for small screens */
+      line-height: 1.5; /* Adjust line height for readability */
+      margin-bottom: 20px; /* Adjusted margin-bottom for small screens */
+  }
+
+  .privacy-policy ul {
+      margin-left: 10px; /* Adjust margin for better fit */
+  }
+}

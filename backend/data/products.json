@@ -1,0 +1,362 @@
+[
+  {
+    "name": "Puma Boys T-shirt, Summer Collection",
+    "price": 15.5,
+    "description": "Boys Printed Casual Wear T-shirt - Premium quality cotton blend with comfortable fit, perfect for summer activities",
+    "ratings": 4.2,
+    "images": [
+      {
+        "image": "/uploads/product/boys-image1.jfif"
+      }
+    ],
+    "category": "Boys",
+    "style_id": "PM001",
+    "stock": 50,
+    "numOfReviews": 15,
+    "reviews": [],
+    "color": "Blue",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "name": "Disney Mickey Mouse Tee, Girls Edition",
+    "price": 8.99,
+    "description": "Girls Mickey Mouse Printed T-shirt - Fun and colorful design for everyday wear with sparkly accents",
+    "ratings": 4.8,
+    "images": [
+      {
+        "image": "/uploads/product/boys-image2.jfif"
+      }
+    ],
+    "category": "Girls",
+    "style_id": "DS002",
+    "stock": 75,
+    "numOfReviews": 32,
+    "reviews": [],
+    "color": "Pink",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "name": "Adidas Infant Tee, Baby Comfort",
+    "price": 22.45,
+    "description": "Infants Cotton Blend Printed T-shirt - Soft fabric perfect for babies and toddlers with easy snap buttons",
+    "ratings": 4.1,
+    "images": [
+      {
+        "image": "/uploads/product/infant.jpeg"
+      }
+    ],
+    "category": "Infants",
+    "style_id": "AD003",
+    "stock": 40,
+    "numOfReviews": 7,
+    "reviews": [],
+    "color": "White",
+    "sizes": ["XS", "S", "M", "L"]
+  },
+  {
+    "name": "H&M Girls Floral Top",
+    "price": 18.99,
+    "description": "Girls Floral Print Pure Cotton T-shirt - Beautiful patterns with premium cotton fabric",
+    "ratings": 4.5,
+    "images": [
+      {
+        "image": "/uploads/product/girl2.jpeg"
+      }
+    ],
+    "category": "Girls",
+    "style_id": "HM004",
+    "stock": 60,
+    "numOfReviews": 20,
+    "reviews": [],
+    "color": "Pink",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "name": "Nike Athletic Wear",
+    "price": 20.75,
+    "description": "Boys Dri-Fit Athletic Wear T-shirt - Moisture-wicking fabric for active kids",
+    "ratings": 4.7,
+    "images": [
+      {
+        "image": "/uploads/product/csk jersey.jpeg"
+      }
+    ],
+    "category": "Boys",
+    "style_id": "NK005",
+    "stock": 45,
+    "numOfReviews": 25,
+    "reviews": [],
+    "color": "Black",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "name": "Zara Kids Casual Tee",
+    "price": 16.99,
+    "description": "Unisex casual wear T-shirt with modern prints - Perfect for everyday comfort",
+    "ratings": 4.3,
+    "images": [
+      {
+        "image": "/uploads/product/th.jpeg"
+      }
+    ],
+    "category": "Boys",
+    "style_id": "ZR006",
+    "stock": 55,
+    "numOfReviews": 18,
+    "reviews": [],
+    "color": "Green",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "name": "Gap Girls Summer Top",
+    "price": 14.5,
+    "description": "Girls summer collection T-shirt - Light and breezy fabric for hot weather",
+    "ratings": 4.4,
+    "images": [
+      {
+        "image": "/uploads/product/girlstop.jpg"
+      }
+    ],
+    "category": "Girls",
+    "style_id": "GP007",
+    "stock": 65,
+    "numOfReviews": 22,
+    "reviews": [],
+    "color": "Yellow",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "name": "Carter's Baby Onesie",
+    "price": 12.99,
+    "description": "Infant cotton onesie with cute animal prints - Super soft and comfortable",
+    "ratings": 4.6,
+    "images": [
+      {
+        "image": "/uploads/product/infant1.jpeg"
+      }
+    ],
+    "category": "Infants",
+    "style_id": "CT008",
+    "stock": 80,
+    "numOfReviews": 35,
+    "reviews": [],
+    "color": "Multi",
+    "sizes": ["XS", "S", "M"]
+  },
+  {
+    "name": "Polo Ralph Lauren Kids",
+    "price": 25.99,
+    "description": "Premium kids polo shirt - Classic design with superior quality fabric",
+    "ratings": 4.8,
+    "images": [
+      {
+        "image": "/uploads/product/OIP (5).jpeg"
+      }
+    ],
+    "category": "Boys",
+    "style_id": "PRL009",
+    "stock": 35,
+    "numOfReviews": 28,
+    "reviews": [],
+    "color": "Navy",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "name": "Uniqlo Girls Graphic Tee",
+    "price": 13.99,
+    "description": "Girls graphic T-shirt with trendy designs - Made from 100% organic cotton",
+    "ratings": 4.2,
+    "images": [
+      {
+        "image": "/uploads/product/girl.avif"
+      }
+    ],
+    "category": "Girls",
+    "style_id": "UQ010",
+    "stock": 70,
+    "numOfReviews": 16,
+    "reviews": [],
+    "color": "Purple",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "name": "Tommy Hilfiger Kids",
+    "price": 19.99,
+    "description": "Designer kids T-shirt with iconic logo - Premium quality and stylish design",
+    "ratings": 4.5,
+    "images": [
+      {
+        "image": "/uploads/product/yuv1.jpg"
+      }
+    ],
+    "category": "Boys",
+    "style_id": "TH011",
+    "stock": 42,
+    "numOfReviews": 24,
+    "reviews": [],
+    "color": "White",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "name": "Next Girls Party Dress, Sparkle Edition",
+    "price": 29.99,
+    "description": "Girls party dress with sparkly details - Perfect for special occasions with matching accessories",
+    "ratings": 4.7,
+    "images": [
+      {
+        "image": "/uploads/product/giftie.jpg"
+      }
+    ],
+    "category": "Girls",
+    "style_id": "NT012",
+    "stock": 30,
+    "numOfReviews": 31,
+    "reviews": [],
+    "color": "Gold",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "name": "Nike Boys Sports Shorts, Active Wear",
+    "price": 18.5,
+    "description": "Boys athletic shorts with moisture-wicking fabric - Perfect for sports and active play",
+    "ratings": 4.4,
+    "images": [
+      {
+        "image": "/uploads/product/boys-image1.jfif"
+      }
+    ],
+    "category": "Boys",
+    "style_id": "NK013",
+    "stock": 60,
+    "numOfReviews": 28,
+    "reviews": [],
+    "color": "Navy Blue",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "name": "H&M Girls Denim Jacket, Trendy Style",
+    "price": 35.0,
+    "description": "Girls denim jacket with embroidered patches - Trendy and stylish for any occasion",
+    "ratings": 4.6,
+    "images": [
+      {
+        "image": "/uploads/product/girl.avif"
+      }
+    ],
+    "category": "Girls",
+    "style_id": "HM014",
+    "stock": 25,
+    "numOfReviews": 19,
+    "reviews": [],
+    "color": "Light Blue",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "name": "Carter's Infant Romper, Comfort Plus",
+    "price": 16.99,
+    "description": "Infant romper with snap buttons - Super soft cotton blend for maximum comfort",
+    "ratings": 4.9,
+    "images": [
+      {
+        "image": "/uploads/product/infant1.jpeg"
+      }
+    ],
+    "category": "Infants",
+    "style_id": "CT015",
+    "stock": 45,
+    "numOfReviews": 42,
+    "reviews": [],
+    "color": "Pastel Yellow",
+    "sizes": ["0-3M", "3-6M", "6-12M", "12-18M"]
+  },
+  {
+    "name": "Zara Boys Polo Shirt, Classic Fit",
+    "price": 24.99,
+    "description": "Boys classic polo shirt - Premium cotton with refined collar and button placket",
+    "ratings": 4.3,
+    "images": [
+      {
+        "image": "/uploads/product/boys-image2.jfif"
+      }
+    ],
+    "category": "Boys",
+    "style_id": "ZR016",
+    "stock": 40,
+    "numOfReviews": 23,
+    "reviews": [],
+    "color": "Forest Green",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "name": "GAP Girls Leggings Set, Rainbow Collection",
+    "price": 19.99,
+    "description": "Girls colorful leggings set with matching top - Stretchy and comfortable for active kids",
+    "ratings": 4.5,
+    "images": [
+      {
+        "image": "/uploads/product/girl2.jpeg"
+      }
+    ],
+    "category": "Girls",
+    "style_id": "GP017",
+    "stock": 55,
+    "numOfReviews": 36,
+    "reviews": [],
+    "color": "Rainbow",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "name": "Baby Gap Onesie, Organic Cotton",
+    "price": 12.5,
+    "description": "Infant organic cotton onesie - Gentle on sensitive skin with cute animal prints",
+    "ratings": 4.8,
+    "images": [
+      {
+        "image": "/uploads/product/infant blus.jpeg"
+      }
+    ],
+    "category": "Infants",
+    "style_id": "BG018",
+    "stock": 70,
+    "numOfReviews": 51,
+    "reviews": [],
+    "color": "Soft Blue",
+    "sizes": ["0-3M", "3-6M", "6-12M", "12-18M"]
+  },
+  {
+    "name": "Uniqlo Boys Hoodie, Comfort Fleece",
+    "price": 32.0,
+    "description": "Boys fleece hoodie with kangaroo pocket - Warm and cozy for cooler weather",
+    "ratings": 4.4,
+    "images": [
+      {
+        "image": "/uploads/product/boys-image1.jfif"
+      }
+    ],
+    "category": "Boys",
+    "style_id": "UQ019",
+    "stock": 35,
+    "numOfReviews": 27,
+    "reviews": [],
+    "color": "Charcoal Gray",
+    "sizes": ["S", "M", "L", "XL"]
+  },
+  {
+    "name": "Old Navy Girls Sundress, Summer Breeze",
+    "price": 21.99,
+    "description": "Girls lightweight sundress with floral print - Perfect for summer days and picnics",
+    "ratings": 4.6,
+    "images": [
+      {
+        "image": "/uploads/product/girlstop.jpg"
+      }
+    ],
+    "category": "Girls",
+    "style_id": "ON020",
+    "stock": 48,
+    "numOfReviews": 34,
+    "reviews": [],
+    "color": "Coral Pink",
+    "sizes": ["S", "M", "L", "XL"]
+  }
+]
