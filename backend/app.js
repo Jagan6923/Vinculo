@@ -5,7 +5,11 @@ const cookieParser = require('cookie-parser')
 const path = require('path')
 const dotenv = require('dotenv');
 const cors = require('cors');
-dotenv.config({ path: path.join(__dirname, "config/config.env") });
+
+// Load environment variables based on NODE_ENV
+const envFile = process.env.NODE_ENV === 'production' ? 'config.prod.env' : 'config.env';
+dotenv.config({ path: path.join(__dirname, `config/${envFile}`) });
+
 const shiprocketRoutes = require('./routes/shiprocketRoutes');
 const deliveryRoutes = require('./routes/deliveryroute');
 // const Product = require('./products'); 
@@ -14,8 +18,14 @@ const { isAuthenticatedUser, authorizeRoles } = require('./middlewares/authentic
 // CORS configuration for separate frontend/backend hosting
 const corsOptions = {
   origin: function (origin, callback) {
-    // Allow requests from localhost:3000 and undefined (for same-origin requests)
-    const allowedOrigins = ['http://localhost:3000', 'http://127.0.0.1:3000'];
+    // Allow requests from localhost and production domains
+    const allowedOrigins = [
+      'http://localhost:3000',
+      'http://127.0.0.1:3000',
+      process.env.FRONTEND_URL, // Your production frontend URL
+      'https://your-actual-frontend-domain.vercel.app' // Update this with your actual frontend domain
+    ].filter(Boolean); // Remove undefined values
+
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {

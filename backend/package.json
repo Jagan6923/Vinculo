@@ -4,7 +4,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "node start.js",
+    "start:prod": "NODE_ENV=production node start.js",
+    "start:server": "node server.js",
     "seeder": "node seeder.js",
     "dev": "nodemon server.js"
   },

@@ -143,7 +143,7 @@ export default function ProductDetail() {
                                             <Carousel.Item key={image._id || index}>
                                                 <img
                                                     className="d-block w-100"
-                                                    src={`http://localhost:8000${image.image}`}
+                                                    src={`${process.env.REACT_APP_API_URL || 'http://localhost:8000'}${image.image}`}
                                                     alt={firstName}
                                                     onError={(e) => {
                                                         console.log('Image failed to load:', e.target.src);

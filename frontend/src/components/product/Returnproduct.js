@@ -26,7 +26,7 @@ const ReturnProduct = () => {
     formData.append('description', description);
     formData.append('invoice', invoice);
 
-    fetch('http://127.0.0.1:8000p/api/return-product', {
+    fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:8000'}/api/return-product`, {
       method: 'POST',
       body: formData,
     })
@@ -83,7 +83,7 @@ const ReturnProduct = () => {
           />
         </div>
         <button type="submit" className="submit-btn">
-          Submit 
+          Submit
         </button>
       </form>
     </div>
