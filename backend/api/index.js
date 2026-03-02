@@ -34,7 +34,11 @@ const connectDB = async () => {
 };
 
 // Export handler for Vercel
-module.exports = async (req, res) => {
-    await connectDB();
-    return app(req, res);
+module.exports = (req, res) => {
+    connectDB().then(() => {
+        app(req, res);
+    }).catch((err) => {
+        console.error('Connection error:', err);
+        res.status(500).json({ error: 'Internal Server Error', message: err.message });
+    });
 };
