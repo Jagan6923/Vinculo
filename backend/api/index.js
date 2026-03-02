@@ -30,15 +30,31 @@ const connectDB = async () => {
         }
     } catch (error) {
         console.error('Database connection error:', error);
+        throw error; // Re-throw to allow proper error handling
     }
 };
 
 // Export handler for Vercel
 module.exports = (req, res) => {
-    connectDB().then(() => {
-        app(req, res);
-    }).catch((err) => {
-        console.error('Connection error:', err);
-        res.status(500).json({ error: 'Internal Server Error', message: err.message });
-    });
+    try {
+        connectDB()
+            .then(() => {
+                // Pass request to Express app
+                return app(req, res);
+            })
+            .catch((err) => {
+                console.error('Unhandled error:', err);
+                if (!res.headersSent) {
+                    res.status(500).json({ 
+                        error: 'Internal Server Error',
+                        details: process.env.NODE_ENV === 'development' ? err.message : undefined
+                    });
+                }
+            });
+    } catch (error) {
+        console.error('Sync error:', error);
+        if (!res.headersSent) {
+            res.status(500).json({ error: 'Internal Server Error' });
+        }
+    }
 };
